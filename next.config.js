@@ -11,7 +11,14 @@ module.exports = {
             // don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'
             config.resolve.fallback = {
                 fs: false, 
-                "zlib": false
+                "zlib": false,
+                "tls": false,
+                "net": false,
+                "path": false,
+                "http": false,
+                "https": false,
+                "stream": false,
+                "crypto": false
             }
         }
 
